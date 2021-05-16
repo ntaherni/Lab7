@@ -43,7 +43,8 @@ document.querySelector('[src="settings.svg"]').addEventListener('click', (e) => 
 });
 
 document.querySelector('h1').addEventListener('click', (e) => {
-  history.back();
+  if(history.length != 0)
+    history.back();
   document.body.className = '';
   document.querySelector('h1').innerHTML = 'Journal Entries';
   document.querySelector('entry-page').remove();
